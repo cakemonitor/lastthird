@@ -1,6 +1,6 @@
-execute if entity @e[type=minecraft:player,scores={HasDied=1}] run scoreboard players remove @a Lives 1
+execute if entity @e[type=minecraft:player,scores={HasDied=1}] as @a[scores={HasDied=1}] run scoreboard players remove @s Lives 1
 execute if entity @e[type=minecraft:player,scores={HasDied=1}] as @a[scores={HasDied=1}] run function lastthird:namecolor
-execute if entity @e[type=minecraft:player,scores={HasDied=1}] run scoreboard players set @a HasDied 0
+execute if entity @e[type=minecraft:player,scores={HasDied=1}] as @a[scores={HasDied=1}] run scoreboard players set @s HasDied 0
 
 execute as @a[scores={Lives=0}] run gamemode spectator
 execute as @a[scores={Lives=0}] run function lastthird:namecolor
